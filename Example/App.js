@@ -16,6 +16,7 @@ import Rotations from './rotations';
 import Imperative from './imperative';
 import PanRotateAndZoom from './PanRotateAndZoom';
 import ArrayFrom from './arrayFrom';
+import Index from './indexNode';
 
 import InteractablePlayground, {
   SCREENS as INTERACTABLE_SCREENS,
@@ -29,6 +30,10 @@ YellowBox.ignoreWarnings([
 // https://github.com/react-navigation/react-navigation/issues/3956
 
 const SCREENS = {
+  index: {
+    screen: Index,
+    title: 'define how any prop should react to animation',
+  },
   Snappable: { screen: Snappable, title: 'Snappable' },
   Test: { screen: Test, title: 'Test' },
   ImageViewer: { screen: ImageViewer, title: 'Image Viewer' },

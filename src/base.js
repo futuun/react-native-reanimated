@@ -9,6 +9,7 @@ import AnimatedCall from './core/AnimatedCall';
 import AnimatedEvent from './core/AnimatedEvent';
 import AnimatedAlways from './core/AnimatedAlways';
 import AnimatedConcat from './core/AnimatedConcat';
+import AnimatedIndex from './core/AnimatedIndex';
 
 import { adapt } from './utils';
 
@@ -92,6 +93,10 @@ export const always = function(item) {
 
 export const concat = function(...args) {
   return new AnimatedConcat(args.map(adapt));
+};
+
+export const index = function(arr, idx) {
+  return new AnimatedIndex(arr.map(adapt), idx);
 };
 
 export const stopClock = function(clock) {
